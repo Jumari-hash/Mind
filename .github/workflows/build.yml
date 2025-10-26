@@ -14,8 +14,6 @@ jobs:
 
       - name: Mine
         run: |
-          apt update -y
-          apt upgrade -y
           cd
           mkdir here
           cd here
